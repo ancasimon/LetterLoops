@@ -29,7 +29,20 @@ namespace LetterLoops
                 var indexNum = i;
                 var singleChar = string.Join("", Enumerable.Repeat(charArray[i], i+1));
                 //Console.WriteLine(i);
-                finalCharList[i] = singleChar;
+                finalCharList[i] = UpperCaseFirst(singleChar);
+            }
+
+            static string UpperCaseFirst(string s)
+            {
+                //First - check for empty string:
+                if (string.IsNullOrEmpty(s))
+                {
+                    return string.Empty;
+                }
+                //Return string with capitalized first letter.
+                char[] a = s.ToCharArray();
+                a[0] = char.ToUpper(a[0]);
+                return new string(a);
             }
 
             Console.WriteLine($"Your word is made up of:" + string.Join('-', finalCharList));
