@@ -22,7 +22,7 @@ namespace LetterLoops
             var finalCharList = charArray.Select( c => c.ToString()).ToArray();
             //Console.WriteLine($"finalCharList when first copied: { finalCharList }");
 
-            //3 - loop over each character in the new char array and print it out (just once at this point!) and then push each character into the new finalCharList I created as a copy above:
+            //3 - loop over each character in the new char array and print it out and then push each character into the new finalCharList I created as a copy above:
             for (int i = 0; i < charArray.Length; i++)
             {
                 //Console.WriteLine(charArray[i]);
